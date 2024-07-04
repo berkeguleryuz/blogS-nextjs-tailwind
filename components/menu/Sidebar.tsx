@@ -45,27 +45,6 @@ const Sidebar = () => {
                   route={link.route}
                   icon={link.icon}
                 />
-                // <Button
-                //   asChild
-                //   variant={"ghost"}
-                //   key={link.route}
-                //   className={cn(
-                //     "w-full h-12 justify-center",
-                //     isActive
-                //       ? "bg-lime-300 hover:bg-lime-400 dark:bg-lime-400 dark:hover:bg-lime-300 border border-slate-950 dark:border-lime-100"
-                //       : "hover:bg-slate-300 dark:hover:bg-slate-400",
-                //   )}>
-                //   <Link href={link.route}>
-                //     <div
-                //       className={cn(
-                //         "flex items-center w-full gap-2 text-black dark:text-slate-100 text-lg",
-                //         isActive && "text-slate-950 dark:text-slate-800",
-                //       )}>
-                //       <IconComponent className="h-6 w-6" />
-                //       <p className="">{link.label}</p>
-                //     </div>
-                //   </Link>
-                // </Button>
               );
             })}
           </ul>
@@ -86,15 +65,6 @@ const Sidebar = () => {
                   route={link.route}
                   icon={link.icon}
                 />
-                // <div className="" key={link.route}>
-                //   <li className="flex flex-row justify-between items-center font-semibold w-full hover:bg-slate-300 dark:hover:bg-slate-600 rounded-full">
-                //     <Link
-                //       href={link.route}
-                //       className="p-4 font-semibold flex gap-2">
-                //       <IconComponent className="text-black dark:text-white text-xl" />
-                //     </Link>
-                //   </li>
-                // </div>
               );
             })}
           </ul>
