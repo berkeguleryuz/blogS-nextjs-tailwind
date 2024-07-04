@@ -50,7 +50,7 @@ export const SocialLinks = ({ route, icon }: SocialLinksProps) => {
   return (
     <div className="">
       <li className="flex flex-row justify-between items-center font-semibold w-full hover:bg-slate-300 dark:hover:bg-slate-600 rounded-full">
-        <Link href={route} className="p-4 font-semibold flex gap-2">
+        <Link href={route} target="_blank" className="p-4 font-semibold flex gap-2">
           <IconComponent className="text-black dark:text-white text-xl" />
         </Link>
       </li>
