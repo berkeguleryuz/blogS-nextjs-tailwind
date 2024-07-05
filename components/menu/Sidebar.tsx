@@ -16,17 +16,15 @@ const Sidebar = () => {
   return (
     <aside className="hidden lg:flex h-screen w-72 bg-slate-400 dark:bg-neutral-950 border-r-2 dark:border-r-slate-700/80">
       <div className="flex flex-col gap-4 justify-center items-center w-full">
-        <div className="mx-auto ml-14 justify-center items-center mt-12">
+        <div className="mx-auto justify-center items-center mt-12">
           <Link href={"/"}>
-            <Image
-              src={"/logo.png"}
-              alt="logo"
-              width={160}
-              height={160}
-              className="rounded-full"
-            />
+            {localStorage.getItem("theme") == "dark" ? (
+              <Image src={"/logow.png"} alt="logo" width={120} height={100} />
+            ) : (
+              <Image src={"/logo.png"} alt="logo" width={120} height={100} />
+            )}
           </Link>
-          <div className="mt-6 text-center">
+          <div className="mt-3 text-center border-t-2 decoration-border border-lime-500">
             <DarkMode />
           </div>
         </div>

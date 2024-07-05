@@ -25,13 +25,21 @@ const MobileMenu = () => {
   return (
     <header className="flex lg:hidden p-3 justify-between items-center fixed w-full border-b bg-slate-400 dark:bg-neutral-950 dark:border-r-slate-700/80">
       <Link href={"/"} className="flex items-center justify-center gap-3">
-        <Image
-          src={"/logo.png"}
-          alt="logo"
-          width={70}
-          height={70}
-          className="rounded-full"
-        />
+        {localStorage.getItem("theme") == "dark" ? (
+          <Image
+            src={"/logow.png"}
+            alt="logo"
+            width={120}
+            height={100}
+          />
+        ) : (
+          <Image
+            src={"/logo.png"}
+            alt="logo"
+            width={120}
+            height={100}
+          />
+        )}
       </Link>
 
       <Sheet>

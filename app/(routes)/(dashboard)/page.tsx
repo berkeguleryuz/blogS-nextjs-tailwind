@@ -1,10 +1,8 @@
 import { DarkMode } from "@/components/DarkMode";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <main>
+    <main className="container p-5 mx-auto">
       <DarkMode />
     </main>
   );
