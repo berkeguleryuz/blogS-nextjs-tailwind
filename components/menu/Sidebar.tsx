@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { DarkMode } from "@/components/DarkMode";
 import { navLinks, socialMedia } from "@/constants";
 import { Button } from "@/components/ui/button";
@@ -10,15 +10,18 @@ import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import NavLinks, { SocialLinks } from "./NavLinks";
+import { useTheme } from "next-themes";
 
 const Sidebar = () => {
   const pathname = usePathname();
+  const { theme } = useTheme();
+
   return (
-    <aside className="hidden lg:flex h-screen w-72 bg-slate-400 dark:bg-neutral-950 border-r-2 dark:border-r-slate-700/80">
+    <aside className="hidden lg:flex h-screen w-72 bg-slate-400 dark:bg-neutral-900 border-r-2 dark:border-r-neutral-800/80">
       <div className="flex flex-col gap-4 justify-center items-center w-full">
         <div className="mx-auto justify-center items-center mt-12">
           <Link href={"/"}>
-            {localStorage.getItem("theme") == "dark" ? (
+            {theme === "dark" ? (
               <Image src={"/logow.png"} alt="logo" width={120} height={100} />
             ) : (
               <Image src={"/logo.png"} alt="logo" width={120} height={100} />

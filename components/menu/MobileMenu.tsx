@@ -19,26 +19,20 @@ import { DarkMode } from "../DarkMode";
 import NavLinks, { SocialLinks } from "./NavLinks";
 import { navLinks, socialMedia } from "@/constants";
 import { usePathname } from "next/navigation";
+import { useEffect } from "react";
+import { useTheme } from "next-themes";
 
 const MobileMenu = () => {
   const pathname = usePathname();
+  const { theme } = useTheme();
+
   return (
     <header className="flex lg:hidden p-3 justify-between items-center fixed w-full border-b bg-slate-400 dark:bg-neutral-950 dark:border-r-slate-700/80">
       <Link href={"/"} className="flex items-center justify-center gap-3">
-        {localStorage.getItem("theme") == "dark" ? (
-          <Image
-            src={"/logow.png"}
-            alt="logo"
-            width={120}
-            height={100}
-          />
+        {theme === "dark" ? (
+          <Image src={"/logow.png"} alt="logo" width={120} height={100} />
         ) : (
-          <Image
-            src={"/logo.png"}
-            alt="logo"
-            width={120}
-            height={100}
-          />
+          <Image src={"/logo.png"} alt="logo" width={120} height={100} />
         )}
       </Link>
 

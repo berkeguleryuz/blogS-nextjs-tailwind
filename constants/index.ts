@@ -1,4 +1,4 @@
-import {  CodeIcon, Compass, Contact, Store } from "lucide-react";
+import { CodeIcon, Compass, Contact, Store } from "lucide-react";
 import { FiInstagram, FiGithub, FiLinkedin, FiHome } from "react-icons/fi";
 
 export const navLinks = [
@@ -40,5 +40,56 @@ export const socialMedia = [
   {
     route: "https://www.clodron.com",
     icon: FiHome,
-  }
+  },
+];
+
+export const BrowseCategory = [
+  {
+    label: "All",
+    route: "/",
+  },
+  {
+    label: "Next.js",
+    route: "/browse/nextjs",
+  },
+  {
+    label: "React.js",
+    route: "/browse/reactjs",
+  },
+  {
+    label: "Shdcn",
+    route: "/browse/shdcn",
+  },
+  {
+    label: "Mysql",
+    route: "/browse/mysql",
+  },
+  {
+    label: "MongoDb",
+    route: "/browse/mongodb",
+  },
+  {
+    label: "Prisma",
+    route: "/browse/prisma",
+  },
+  {
+    label: "Tailwind",
+    route: "/browse/tailwindcss",
+  },
+  {
+    label: "NextAuth",
+    route: "/browse/nextauth",
+  },
+  {
+    label: "PostgreSql",
+    route: "/browse/postgreSql",
+  },
+  {
+    label: "Clerk",
+    route: "/browse/clerk",
+  },
+  {
+    label: "Stripe",
+    route: "/browse/strapi",
+  },
 ];
