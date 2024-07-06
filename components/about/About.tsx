@@ -47,11 +47,11 @@ const About = () => {
               height={500}
             />
           </div>
-          <div className="bg-slate-100 mt-2 dark:bg-neutral-950 border-2 p-3 rounded-xl ">
+          <div className="bg-stone-100 mt-2 dark:bg-neutral-950 border-2 p-3 rounded-xl ">
             <p className="text-left border-lime-500 text-md  border-b-2 mb-2 font-semibold">Categories</p>
             <Categorys />
           </div>
-          <div className="bg-slate-100 mt-2 dark:bg-neutral-950 border-2 p-3 rounded-xl">
+          <div className="bg-stone-100 mt-2 dark:bg-neutral-950 border-2 p-3 rounded-xl">
             <Image
               src="/clodron.gif"
               alt="about us banner"
