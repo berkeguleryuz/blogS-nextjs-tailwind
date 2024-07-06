@@ -36,54 +36,58 @@ const MobileMenu = () => {
         )}
       </Link>
 
-      <Sheet>
-        <SheetTrigger>
-          <MenuIcon className="w-6 h-6" />
-        </SheetTrigger>
-        <SheetContent className="flex flex-col h-screen w-80 bg-slate-400 dark:bg-neutral-950  dark:border-r-slate-700/80">
-          <div className="text-center mt-16 mb-16">
-            <DarkMode />
-          </div>
-          <nav className="w-full h-full flex flex-col justify-between gap-3">
-            <ul className="w-full flex-col items-start gap-4 mt-4">
-              {navLinks.map((link) => {
-                const isActive = pathname === link.route;
-                const IconComponent = link.icon;
+      <div className="flex gap-4">
+        <Button variant={"berke"}>Login</Button>
 
-                return (
-                  <NavLinks
-                    key={link.route}
-                    isActive={isActive}
-                    label={link.label}
-                    route={link.route}
-                    icon={link.icon}
-                  />
-                );
-              })}
-            </ul>
+        <Sheet>
+          <SheetTrigger>
+            <MenuIcon className="w-6 h-6" />
+          </SheetTrigger>
+          <SheetContent className="flex flex-col h-screen w-80 bg-slate-400 dark:bg-neutral-950  dark:border-r-slate-700/80">
+            <div className="text-center mt-16 mb-16">
+              <DarkMode />
+            </div>
+            <nav className="w-full h-full flex flex-col justify-between gap-3">
+              <ul className="w-full flex-col items-start gap-4 mt-4">
+                {navLinks.map((link) => {
+                  const isActive = pathname === link.route;
+                  const IconComponent = link.icon;
 
-            <ul className="flex     w-full flex-wrap items-center justify-center gap-2">
-              <div className="w-full relative">
-                <Input className="w-full rounded-full" />
-                <Button variant={"link"} className="absolute right-0 top-0">
-                  <Search width={15} height={15} />
-                </Button>
-              </div>
-              {socialMedia.map((link) => {
-                const IconComponent = link.icon;
+                  return (
+                    <NavLinks
+                      key={link.route}
+                      isActive={isActive}
+                      label={link.label}
+                      route={link.route}
+                      icon={link.icon}
+                    />
+                  );
+                })}
+              </ul>
 
-                return (
-                  <SocialLinks
-                    key={link.route}
-                    route={link.route}
-                    icon={link.icon}
-                  />
-                );
-              })}
-            </ul>
-          </nav>
-        </SheetContent>
-      </Sheet>
+              <ul className="flex     w-full flex-wrap items-center justify-center gap-2">
+                <div className="w-full relative">
+                  <Input className="w-full rounded-full" />
+                  <Button variant={"link"} className="absolute right-0 top-0">
+                    <Search width={15} height={15} />
+                  </Button>
+                </div>
+                {socialMedia.map((link) => {
+                  const IconComponent = link.icon;
+
+                  return (
+                    <SocialLinks
+                      key={link.route}
+                      route={link.route}
+                      icon={link.icon}
+                    />
+                  );
+                })}
+              </ul>
+            </nav>
+          </SheetContent>
+        </Sheet>
+      </div>
     </header>
   );
 };
