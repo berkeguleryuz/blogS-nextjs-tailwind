@@ -6,7 +6,6 @@ import React, { useEffect, useState } from "react";
 import { DarkMode } from "@/components/DarkMode";
 import { navLinks, socialMedia } from "@/constants";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import NavLinks, { SocialLinks } from "./NavLinks";
@@ -15,6 +14,13 @@ import { useTheme } from "next-themes";
 const Sidebar = () => {
   const pathname = usePathname();
   const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <aside className="hidden lg:flex h-screen w-72 bg-slate-400 dark:bg-neutral-900 border-r-2 dark:border-r-neutral-800/80 fixed">
