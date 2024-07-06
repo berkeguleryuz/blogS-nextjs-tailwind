@@ -41,9 +41,9 @@ const Sidebar = () => {
         <nav className="w-[90%] h-full flex-col justify-between md:flex gap-3">
           <ul className="hidden md:flex w-full flex-col items-start gap-4 mt-14">
             {navLinks.map((link) => {
-              const isActive = pathname === link.route;
-              const IconComponent = link.icon;
-
+              const isActive =
+                pathname === link.route ||
+                link.route === `/${pathname.split("/browse")[0]}`;
               return (
                 <NavLinks
                   key={link.route}
@@ -64,8 +64,6 @@ const Sidebar = () => {
               </Button>
             </div>
             {socialMedia.map((link) => {
-              const IconComponent = link.icon;
-
               return (
                 <SocialLinks
                   key={link.route}

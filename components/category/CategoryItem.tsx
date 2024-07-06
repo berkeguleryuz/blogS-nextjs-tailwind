@@ -16,7 +16,7 @@ const CategoryItem = ({ href, label }: CategoryItemProps) => {
     <Button
       asChild
       variant={isActive ? "default" : "outline"}
-      className="w-full">
+      className="">
       <Link href={href}>{label}</Link>
     </Button>
   );

@@ -13,3 +13,13 @@ const Category = () => {
 };
 
 export default Category;
+
+export const Categorys = () => {
+  return (
+    <div className="flex flex-wrap gap-1">
+      {BrowseCategory.map((item) => (
+        <CategoryItem key={item.route} href={item.route} label={item.label} />
+      ))}
+    </div>
+  );
+};
