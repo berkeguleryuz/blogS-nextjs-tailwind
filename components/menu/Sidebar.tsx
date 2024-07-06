@@ -23,7 +23,7 @@ const Sidebar = () => {
   if (!mounted) return null;
 
   return (
-    <aside className="hidden lg:flex h-screen w-72 bg-slate-400 dark:bg-neutral-900 border-r-2 dark:border-r-neutral-800/80 fixed">
+    <aside className="hidden lg:flex h-screen w-72 bg-stone-400 dark:bg-neutral-900 border-r-2 dark:border-r-neutral-800/80 fixed">
       <div className="flex flex-col gap-4 justify-center items-center w-full">
         <div className="mx-auto justify-center items-center mt-12">
           <Link href={"/"}>

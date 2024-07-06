@@ -6,7 +6,7 @@ import React from "react";
 
 const NotFoundPage = () => {
   return (
-    <div className="flex justify-center bg-slate-400 dark:bg-neutral-900">
+    <div className="flex justify-center bg-stone-400 dark:bg-neutral-900">
       <div className="w-1/3 h-screen hidden lg:block">
         <Image
           src={"/notfound.jpg"}

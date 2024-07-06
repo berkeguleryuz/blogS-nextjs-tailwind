@@ -27,7 +27,7 @@ const MobileMenu = () => {
   const { theme } = useTheme();
 
   return (
-    <header className="flex lg:hidden p-3 justify-between items-center fixed w-full border-b bg-slate-400 dark:bg-neutral-950 dark:border-r-slate-700/80">
+    <header className="flex lg:hidden p-3 justify-between items-center fixed w-full border-b bg-stone-400 dark:bg-neutral-950 dark:border-r-stone-700/80">
       <Link href={"/"} className="flex items-center justify-center gap-3">
         {theme === "dark" ? (
           <Image src={"/logow.png"} alt="logo" width={120} height={100} />
@@ -43,7 +43,7 @@ const MobileMenu = () => {
           <SheetTrigger>
             <MenuIcon className="w-6 h-6" />
           </SheetTrigger>
-          <SheetContent className="flex flex-col h-screen w-80 bg-slate-400 dark:bg-neutral-950  dark:border-r-slate-700/80">
+          <SheetContent className="flex flex-col h-screen w-80 bg-stone-400 dark:bg-neutral-950  dark:border-r-stone-700/80">
             <div className="text-center mt-16 mb-16">
               <DarkMode />
             </div>

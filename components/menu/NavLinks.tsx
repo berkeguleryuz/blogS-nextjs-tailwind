@@ -22,15 +22,16 @@ const NavLinks = ({ isActive, label, route, icon }: NavLinksProps) => {
         "w-full h-12 justify-center",
         isActive
           ? "bg-lime-300 hover:bg-lime-400 dark:bg-lime-400 dark:hover:bg-lime-300 border border-slate-950 dark:border-lime-100"
-          : "hover:bg-slate-300 dark:hover:bg-slate-400",
+          : "hover:bg-stone-300 dark:hover:bg-stone-400",
       )}>
       <Link href={route}>
         <div
           className={cn(
-            "flex items-center w-full gap-2 text-black dark:text-slate-100 text-lg",
+            "flex items-center text-center w-full gap-3 text-black dark:text-slate-100 text-md",
             isActive && "text-slate-950 dark:text-slate-800",
           )}>
-          <IconComponent className="w-6 h-6" />
+          <IconComponent className="w-4 h-4" /> 
+          <p className="text-center flex items-center self-center justify-center">|</p>
           <p className="">{label}</p>
         </div>
       </Link>
@@ -49,7 +50,7 @@ export const SocialLinks = ({ route, icon }: SocialLinksProps) => {
   const IconComponent = icon;
   return (
     <div className="">
-      <li className="flex flex-row justify-between items-center font-semibold w-full hover:bg-slate-300 dark:hover:bg-slate-600 rounded-full">
+      <li className="flex flex-row justify-between items-center font-semibold w-full hover:bg-stone-300 dark:hover:bg-stone-600 rounded-full">
         <Link href={route} target="_blank" className="p-4 font-semibold flex gap-2">
           <IconComponent className="text-black dark:text-white text-xl" />
         </Link>

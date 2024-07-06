@@ -7,7 +7,7 @@ const About = () => {
     <div className="mt-4">
       <div className="grid grid-cols-1 lg:grid-cols-8 gap-5">
         <div className="lg:col-span-5">
-          <div className="bg-slate-100 dark:bg-neutral-950 p-3 border-2  rounded-xl">
+          <div className="bg-stone-100 dark:bg-neutral-950 p-3 border-2  rounded-xl">
             <Image
               src="/banner.jpg"
               alt="about us banner"
@@ -38,7 +38,7 @@ const About = () => {
           </div>
         </div>
         <div className="lg:col-span-3">
-          <div className="bg-slate-100 dark:bg-neutral-950 border-2 p-3  rounded-xl">
+          <div className="bg-stone-100 dark:bg-neutral-950 border-2 p-3  rounded-xl">
             <Image
               src="/banner2.jpg"
               alt="about us banner"
