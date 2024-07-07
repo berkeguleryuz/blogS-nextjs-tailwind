@@ -57,6 +57,10 @@ export const BrowseCategory = [
     route: "/browse/reactjs",
   },
   {
+    label: "Solidity",
+    route: "/browse/solidity",
+  },
+  {
     label: "Shdcn",
     route: "/browse/shdcn",
   },
