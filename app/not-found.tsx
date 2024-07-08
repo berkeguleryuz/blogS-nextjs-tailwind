@@ -20,7 +20,7 @@ const NotFoundPage = () => {
       <div className="w-full h-screen lg:p-36 md:p-52 sm:p-20 p-8 lg:w-2/3 flex flex-col items-center">
         <h1 className="text-3xl font-semibold mb-4">Not Found</h1>
         <ShieldEllipsisIcon className="h-96 w-96" />
-        <Button asChild variant={"berke"}>
+        <Button asChild variant={"berke"} className="mt-5">
           <Link href={"/"}>Go back</Link>
         </Button>
       </div>
