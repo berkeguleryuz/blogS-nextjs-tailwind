@@ -18,7 +18,9 @@ const ProjectPage = ({ params }: ProjectPageProps) => {
     toast.error("Project not found");
     return redirect("/browse");
   }
-  return <div>ProjectPage</div>;
+  return <div className="mt-8">
+    
+  </div>;
 };
 
 export default ProjectPage;
