@@ -39,7 +39,7 @@ const BrowseItem = ({
   return (
     <div className="col-span-1">
       <Link href={url}>
-        <Card className="hover:shadow-stone-400 shadow-xl mx-auto">
+        <Card className="hover:shadow-stone-400 bg-stone-100 dark:bg-neutral-900 shadow-xl mx-auto">
           <CardHeader>
             <Image alt={description!} src={image} width={500} height={500} />
             <p className="mt-2 text-base font-semibold">{title}</p>

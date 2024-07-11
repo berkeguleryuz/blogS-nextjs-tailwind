@@ -15,6 +15,20 @@ interface ProjectPageProps {
   };
 }
 
+export async function generateMetadata({ params }: ProjectPageProps) {
+  const project = Projects.find((project) =>
+    project.href.includes(params.slug),
+  );
+
+  if (!project) {
+    toast.error("Project not found");
+    return redirect("/browse");
+  }
+  return {
+    title: project.title,
+  };
+}
+
 const ProjectPage = ({ params }: ProjectPageProps) => {
   const project = Projects.find((project) =>
     project.href.includes(params.slug),
@@ -24,6 +38,21 @@ const ProjectPage = ({ params }: ProjectPageProps) => {
     toast.error("Project not found");
     return redirect("/browse");
   }
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    title: project.title,
+    name: project.title,
+    image: project.image,
+    description: project.description,
+    publishedAt: "2024-07-05",
+    updatedAt: "2024-07-07",
+    author: "Omegayon",
+    isPublished: true,
+    tags: project.title,
+  };
+
   return (
     <div className="mt-4">
       <div className="grid grid-cols-1 lg:grid-cols-8 gap-5">
