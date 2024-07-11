@@ -26,6 +26,23 @@ export async function generateMetadata({ params }: ProjectPageProps) {
   }
   return {
     title: project.title,
+    description: project.description,
+    openGraph: {
+      title: project.title,
+      description: project.description,
+      images: [
+        {
+          url: project.image,
+        },
+      ],
+      type: "website",
+      url: `https://omegayon.com/project/${project.href}`,
+      siteName: "Omegayon",
+      locale: "en-US",
+      robots: "index, follow",
+      author: "Omegayon",
+      publisher: "Omegayon",
+    },
   };
 }
 
